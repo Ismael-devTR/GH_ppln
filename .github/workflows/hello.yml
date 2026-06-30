@@ -1,0 +1,25 @@
+name: Hello world
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+    
+
+jobs:
+  saludar:
+    runs-on: ubuntu-latests
+    steps:
+      - name: Checkout del codigo
+        uses: actions/checkout@v4
+      
+      - name: Imprimir Hola mundo
+        run: echo "Hola mundo"
+
+      - name: Repo data
+        run: |
+          echo "Rama actual: ${{ github.ref }}"
+          echo "Commit: ${{ github.sha }}"
+          echo "Autor: ${{ github.actor }}"
