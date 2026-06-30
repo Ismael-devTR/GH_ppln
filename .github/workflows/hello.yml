@@ -10,7 +10,7 @@ on:
 
 jobs:
   saludar:
-    runs-on: ubuntu-latests
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout del codigo
         uses: actions/checkout@v4
